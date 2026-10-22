@@ -8,7 +8,7 @@ Commit      : unknown
 Message     : 
 Author      : 
 Committed   : 
-Checked     : 2026-10-21 20:06:59 Central Daylight Time
+Checked     : 2026-10-21 20:16:34 Central Daylight Time
 Python      : 3.14.8
 
 ================================================================
@@ -36,9 +36,10 @@ CHECK RESULTS
 --- Git and GitHub (required for your points to count) ---
 [PASS] Git is installed
 [PASS] This folder is a Git repository
-[FAIL] You have committed your own work
-   > So far there is only the template's first commit.
-   > In Source Control, type a message and click Commit.
+[PASS] You have committed your own work
+[FAIL] Your latest changes are committed
+   > main.py has changes that are not committed yet.
+   > Save, then Commit in Source Control, so GitHub has what check.py tested.
 
 POINTS FROM check.py: 40 / 40
 
@@ -50,7 +51,7 @@ Enter the total yearly cost: Enter your number of credits per semester: 1 Per se
 3 Per class day
 4 Per credit
 5 Per CS 1430 class
-6 ___________
+6 Cost per bathroom break
 Q. Quit
 Choose an option: One semester costs $7300.50
 1 Per semester
@@ -58,7 +59,7 @@ Choose an option: One semester costs $7300.50
 3 Per class day
 4 Per credit
 5 Per CS 1430 class
-6 ___________
+6 Cost per bathroom break
 Q. Quit
 Choose an option: One month costs $1622.33
 1 Per semester
@@ -66,7 +67,7 @@ Choose an option: One month costs $1622.33
 3 Per class day
 4 Per credit
 5 Per CS 1430 class
-6 ___________
+6 Cost per bathroom break
 Q. Quit
 Choose an option: One class day costs $97.34
 1 Per semester
@@ -74,7 +75,7 @@ Choose an option: One class day costs $97.34
 3 Per class day
 4 Per credit
 5 Per CS 1430 class
-6 ___________
+6 Cost per bathroom break
 Q. Quit
 Choose an option: One credit costs $486.70
 1 Per semester
@@ -82,7 +83,7 @@ Choose an option: One credit costs $486.70
 3 Per class day
 4 Per credit
 5 Per CS 1430 class
-6 ___________
+6 Cost per bathroom break
 Q. Quit
 Choose an option: Every CS 1430 class costs $32.45
 1 Per semester
@@ -90,6 +91,6 @@ Choose an option: Every CS 1430 class costs $32.45
 3 Per class day
 4 Per credit
 5 Per CS 1430 class
-6 ___________
+6 Cost per bathroom break
 Q. Quit
 Choose an option:

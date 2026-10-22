@@ -47,7 +47,8 @@ def cost_per_class(annual_cost, credits):
     return classcost
 
 def cost_per_bathroom_break(annual_cost, credits):
-    bathroom_cost = ((((annual_cost/(credits*SEMESTERS_PER_YEAR))*CS1430_CREDITS)/CS1430_MEETINGS_PER_SEMESTER)/MINUTES_PER_CLASS)*MINUTES_PER_BATHROOM_BREAK
+    cost_per_class = (((annual_cost/(credits*SEMESTERS_PER_YEAR))*CS1430_CREDITS)/CS1430_MEETINGS_PER_SEMESTER) #Uses the same formula as cost_per_class
+    bathroom_cost = (cost_per_class/MINUTES_PER_CLASS)*MINUTES_PER_BATHROOM_BREAK #Calculates cost per minute of class then multiplies by the bathroom break length constant
     return bathroom_cost
 
 
@@ -64,7 +65,7 @@ def main():
         print("3 Per class day")
         print("4 Per credit")
         print("5 Per CS 1430 class")
-        print("6 ___________")
+        print("6 Cost per bathroom break")
         print("Q. Quit")
         choice = input("Choose an option: ")
 
