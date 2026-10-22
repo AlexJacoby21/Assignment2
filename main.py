@@ -86,7 +86,7 @@ def main():
             print(f"You pay ${cost_of_distraction(cost,minutes_focused):.2f} per year to gain no knowledge")
         else:
             print("Please select a valid option")    
-        # Add a branch for each menu option here.
+        
 
 
 # ---- LAUNCH: do not change ----
