@@ -13,7 +13,6 @@ CS1430_CREDITS = 3
 CS1430_MEETINGS_PER_SEMESTER = 45
 
 MINUTES_PER_CLASS = 50
-MINUTES_PER_BATHROOM_BREAK = 5
 
 # ---- FUNCTIONS: replace each return 0 ----
 
@@ -46,10 +45,11 @@ def cost_per_class(annual_cost, credits):
     classcost = (((annual_cost/(credits*SEMESTERS_PER_YEAR))*CS1430_CREDITS)/CS1430_MEETINGS_PER_SEMESTER)
     return classcost
 
-def cost_per_bathroom_break(annual_cost, credits):
-    cost_per_class = (((annual_cost/(credits*SEMESTERS_PER_YEAR))*CS1430_CREDITS)/CS1430_MEETINGS_PER_SEMESTER) #Uses the same formula as cost_per_class
-    bathroom_cost = (cost_per_class/MINUTES_PER_CLASS)*MINUTES_PER_BATHROOM_BREAK #Calculates cost per minute of class then multiplies by the bathroom break length constant
-    return bathroom_cost
+
+def cost_of_distraction(annual_cost, minutes_focused):
+    portion_distracted = ((MINUTES_PER_CLASS-minutes_focused)/MINUTES_PER_CLASS)
+    distraction_cost = annual_cost * portion_distracted
+    return distraction_cost
 
 
 # ---- PROGRAM ----
@@ -65,7 +65,7 @@ def main():
         print("3 Per class day")
         print("4 Per credit")
         print("5 Per CS 1430 class")
-        print("6 Cost per bathroom break")
+        print("6 Cost of daydreaming")
         print("Q. Quit")
         choice = input("Choose an option: ")
 
@@ -82,7 +82,8 @@ def main():
         elif choice == "5":
             print(f"Every CS 1430 class costs ${cost_per_class(cost,credits):.2f}")
         elif choice == "6":
-            print(f"Every bathroom break costs ${cost_per_bathroom_break(cost,credits):.2f}")
+            minutes_focused = float(input("How many minutes do you pay attention in a 50 minute class? "))
+            print(f"You pay ${cost_of_distraction(cost,minutes_focused):.2f} per year to gain no knowledge")
         else:
             print("Please select a valid option")    
         # Add a branch for each menu option here.
